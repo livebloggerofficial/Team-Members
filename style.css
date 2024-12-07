@@ -1,0 +1,73 @@
+.team-member img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-container {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+}
+
+.team-member .image-container {
+  position: relative;
+}
+
+.team-member .image-container img {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: bottom;
+}
+
+.team-member:hover .image-container img {
+  transform: scale(1.2);
+  border-radius: 16px;
+}
+
+.team-member .image-container .circle {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #efefef;
+  inset: 0;
+  z-index: -1;
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-origin: bottom;
+}
+
+.team-member:hover .image-container .circle {
+  background: #f59393;
+  transform: scale(1.05);
+}
+
+.team-member:nth-child(2):hover .image-container .circle {
+  background: #cbf593;
+}
+
+.team-member:nth-child(3):hover .image-container .circle {
+  background: #93f5f2;
+}
+
+.team-member:nth-child(4):hover .image-container .circle {
+  background: #9a93f5;
+}
+
+.team-member .details {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.team-member .name {
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.team-member:hover .name {
+  transform: scale(1.2);
+}
